@@ -1,0 +1,38 @@
+- https://gist.github.com/Potherca/c8a1eb6d290e46971de4a6ac02f70fab
+- https://medium.com/@porteneuve/30-git-cli-options-you-should-know-about-15423e8771df
+- https://orga.cat/posts/most-useful-git-commands
+- https://github.com/git-tips/tips
+
+
+<comment style="display: none;">
+  <p
+    data-badge="Awesome!"
+    data-badge-fg="#3B2C00"
+    data-badge-bg="#E84D31"
+    data-badge-position="br"
+    data-badge-class="extra-classes fragment fade-in-then-out"
+  >Hello!</p>
+<br>
+  <pre
+    data-badge="Awesome!"
+    data-badge-fg="#3B2C00"
+    data-badge-bg="#E84D31"
+    data-badge-position="br"
+    data-badge-class="extra-classes fragment fade-in"
+  >
+    <code class="language-php">...</code>
+  </pre>
+  <div
+    data-badge="Awesome!"
+    data-badge-fg="#3B2C00"
+    data-badge-bg="#E84D31"
+    data-badge-position="br"
+    data-badge-class="extra-classes fragment fade-in"
+  >
+    <pre>
+      <code class="language-shell">&lt;?php
+      echo 'foo';
+      </code>
+    </pre>
+  </div>
+</comment>

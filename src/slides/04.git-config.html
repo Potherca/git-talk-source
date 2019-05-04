@@ -1,0 +1,93 @@
+<!-- ======================================================================= -->
+<!--                            CONFIGURATION                                -->
+<!-- ======================================================================= -->
+<section data-slide-section="git config">
+  <section>
+    <h1>Config</h1>
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="example" data-badge-class="example">
+    <h1>Config</h1>
+
+    <pre><code class="language-shell">
+    git config --list --global
+<span class="fragment">
+    user.name=Ben Peachey
+    user.email=jobs@takeaway.com
+</span></code></pre>
+
+    <pre class="fragment"><code class="language-shell">
+    git config --edit
+    </code></pre>
+
+    <pre class="fragment example-config" data-badge="~/.gitconfig" data-badge-position="tl"><code>
+[user]
+    name = Ben Peachey
+    email = jobs@takeaway.com
+</code></pre>
+
+    <a class="manual-link">https://git-scm.com/docs/git-config</a>
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="v1.7.10" data-badge-class="version">
+    <h1>Git config includes</h1>
+    <pre class="example-config" data-badge=".gitconfig" data-badge-position="tl"><code>
+[include]
+        path = /path/to/foo.inc
+</code></pre>
+    <p class="example-command" data-badge="git config" data-badge-position="tl">
+      include.path /path/to/foo.inc
+    </p>
+    <a class="manual-link">https://git-scm.com/docs/git-config#_includes</a>
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="example">
+    <h1>Git config includes</h1>
+    <pre class="example-config" data-badge=".gitconfig" data-badge-position="tl"><code>
+[include]
+    path = ~/.gitconfig-alias
+    path = ~/.gitconfig-user
+</code></pre>
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="v2.13.0" data-badge-class="version">
+    <h1>Conditional includes</h1>
+    <p>Include for all repositories inside <code>$HOME/to/group</code></p>
+    <pre class="example-config" data-badge=".gitconfig" data-badge-position="tl"><code>
+[includeIf "gitdir:~/to/group/"]
+        path = /path/to/foo.inc
+</code></pre>
+    <p class="example-command" data-badge="git config" data-badge-position="tl">
+      includeIf.gitdir:~/to/group/ /path/to/foo.inc
+    </p>
+    <a class="manual-link">https://git-scm.com/docs/git-config#_includes</a>
+    <aside class="notes"></aside>
+  </section>
+
+<!-- This setting has become the default
+  <section data-badge="v1.5.3" data-badge-class="version">
+    <h1>Auto track remote</h1>
+    <p class="cli-example" data-badge="git config" data-badge-position="tl">branch.autosetupmerge true</p>
+    <pre class="example-config" data-badge=".gitconfig" data-badge-position="tl"><code>
+      [branch]<br/>
+        autosetupmerge = true
+    </code></pre>
+    <a class="manual-link">https://git-scm.com/docs/git-config#git-config-branchautoSetupMerge</a>
+    <aside class="notes">
+      The valid settings are:
+      - false — no automatic setup is done;
+      - true — automatic setup is done when the starting point is a remote-tracking branch;
+      - always — automatic setup is done when the starting point is either a
+                 local branch or remote-tracking branch. This option defaults to true.
+    </aside>
+  </section>
+-->
+</section>

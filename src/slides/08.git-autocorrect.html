@@ -1,0 +1,112 @@
+<!-- ======================================================================= -->
+<!--                            AUTOCORRECT                                  -->
+<!-- ======================================================================= -->
+<section data-slide-section="git autocorrect">
+  <section>
+    <h1>Autocorrect</h1>
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="example">
+    <h1>Git Suggestions</h1>
+    <pre><code class="language-shell">
+git meh
+
+git: 'meh' is not a git command. See 'git --help'.
+
+Did you mean one of these?
+        fetch
+        merge
+        shell
+</code></pre>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="1.6.1" data-badge-class="version">
+    <h1>Git Autocorrect</h1>
+
+    <pre class="example-config" data-badge=".gitconfig" data-badge-position="tl"><code>
+[help]
+        autocorrect = 35
+</code></pre>
+
+    <p class="example-command" data-badge="git config --global" data-badge-position="tl">
+      help.autoCorrect 35
+    </p>
+
+    <a class="manual-link">https://git-scm.com/docs/git-config#git-config-helpautoCorrect</a>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="example">
+    <h1>Git Autocorrect</h1>
+    <pre><code class="language-shell">
+git doh
+
+WARNING: You called a Git command named 'doh', which does not exist.
+Continuing under the assumption that you meant 'show'
+in 3.5 seconds automatically...
+
+<span class="fragment">[...]</span>
+</code></pre>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <h1>Git Autocorrect</h1>
+
+    <blockquote cite="https://git-scm.com/docs/git-config#git-config-helpautoCorrect">
+      If the value of this option is negative, the corrected command will be executed immediately.
+    </blockquote>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="example">
+
+    <h1>Git Autocorrect</h1>
+
+    <pre><code class="language-shell">
+git doh
+
+WARNING: You called a Git command named 'doh', which does not exist.
+Continuing under the assumption that you meant 'show'
+
+<span class="fragment">[...]</span>
+</code></pre>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="example" data-badge-class="example">
+    <h1>Git Autocorrect</h1>
+    <h2>With multiple options</h2>
+    <pre><code class="language-shell">
+git meh
+
+git: 'meh' is not a git command. See 'git --help'.
+
+Did you mean one of these?
+        fetch
+        merge
+        shell
+</code></pre>
+
+    <p class="fragment">Behaves just like normal suggestion...</p>
+
+    <aside class="notes">
+      ...ad is ignored by git.
+    </aside>
+  </section>
+
+
+</section>

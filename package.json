@@ -1,0 +1,33 @@
+{
+  "name": "git-talk",
+  "version": "0.1.0",
+  "description": "Beyond everyday git.",
+  "main": " ",
+  "dependencies": {
+    "reveal-badges": "ThomasWeinert/reveal-badges",
+    "reveal-elapsed-time-bar": "tkrkt/reveal.js-elapsed-time-bar",
+    "reveal.js": "^3.7.0"
+  },
+  "scripts": {
+    "webpack": "webpack",
+    "babel": "babel src --output-dir lib",
+    "test": " "
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.4",
+    "babel-minify": "^0.5.0",
+    "babel-preset-minify": "^0.5.0",
+    "webpack": "^4.22.0",
+    "webpack-cli": "^3.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": " "
+  },
+  "keywords": [],
+  "author": "Ben Peachey <potherca@gmail.com>",
+  "license": "GPL-3.0"
+}

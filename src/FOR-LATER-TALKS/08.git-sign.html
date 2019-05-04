@@ -1,0 +1,98 @@
+<!-- ======================================================================= -->
+<!--                          SIGNING YOU WORK                               -->
+<!-- ======================================================================= -->
+<section data-slide-section="git sign">
+  <section>
+    <h1>Signing your work<sup>*</sup></h1>
+    <h2 class="fragment"><sup>*</sup> Requires a GPG key</h2>
+    <aside class="notes"></aside>
+  </section>
+
+  <section>
+    <h1>Signing your work</h1>
+    <p>Use an existing GPG key:</p>
+    <pre><code class="language-shell">gpg --list-secret-keys --keyid-format LONG</code></pre>
+
+    <div class="fragment">
+      <p>or, generate a new GPG key:</p>
+      <pre><code class="language-shell">gpg --full-generate-key</code></pre>
+    </div>
+
+    <div class="fragment">
+      <p>or, for GPG version lower than 2.1.17</p>
+      <pre><code class="language-shell">gpg --default-new-key-algo rsa4096 --gen-key</code></pre>
+    </div>
+
+    <aside class="notes"></aside>
+  </section>
+
+  <section data-badge="" data-badge-class="version">
+    <h1>Specify the Key</h1>
+    <pre class="example-config" data-badge=".gitconfig" data-badge-position="tl"><code>
+[user]
+        signingkey 0A1B2C3D
+</code></pre>
+    <p class="example-command" data-badge="git config" data-badge-position="tl">
+      user.signingkey 0A1B2C3D
+    </p>
+    <a class="manual-link">https://git-scm.com/docs/git-config#git-config-usersigningKey</a>
+    <aside class="notes"></aside>
+  </section>
+
+  <section data-badge="" data-badge-class="version">
+    <h1>Always sign commits</h1>
+    <pre class="example-config" data-badge=".gitconfig" data-badge-position="tl"><code>
+[commit]
+        gpgSign = true
+</code></pre>
+    <p class="example-command" data-badge="git config" data-badge-position="tl">
+      commit.gpgSign true
+    </p>
+    <a class="manual-link">https://git-scm.com/docs/git-config#git-config-commitgpgSign</a>
+    <aside class="notes"></aside>
+  </section>
+
+  <section>
+    <h1>Add you key(s) to ...</h1>
+
+    <table  class="size-three-quarter">
+      <tr>
+        <th><h2>Bitbucket</h2></th>
+        <td>
+          <a>https://confluence.atlassian.com/bitbucketserver/using-gpg-keys-913477014.html</a>
+        </td>
+      </tr>
+      <tr>
+        <th><h2>Github</h2></th>
+        <td>
+          <a>https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/</a>
+        </td>
+      </tr>
+      <tr>
+        <th><h2>Gitlab</h2></th>
+        <td>
+          <a>https://help.github.com/articles/adding-a-new-gpg-key-to-your-github-account/</a>
+        </td>
+      </tr>
+    </table>
+
+    <aside class="notes"></aside>
+  </section>
+
+  <section>
+  <p data-badge="@TODO">
+    Mention how to see if/which tags and commits are signed.
+    Maybe mention <code>git tags</code> alias.
+  </p>
+    <aside class="notes"></aside>
+  </section>
+
+  <section>
+  <p data-badge="@TODO">
+    Mention
+    <code>tag.forceSignAnnotated</code> to force tags to be signed and
+    <code>gpg.program</code> to change the Signing Tool (other version of GPG or SMIME, etc.)
+    <aside class="notes"></aside>
+  </section>
+
+</section>

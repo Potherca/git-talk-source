@@ -1,0 +1,254 @@
+<style>
+/* Styles specific to this talk */
+
+/*
+  @TODO: Check and fix padding and margin of example blocks
+         - "language" blocks
+         - "example-config" blocks (rename "example-file" ?)
+         - "example-command" blocks (rename "example-git-command" ?)
+*/
+/*=======( On All Slides )====================================================*/
+  .sponsor {
+    z-index: 100;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 10%;
+  }
+/*=======( Specific Slides )==================================================*/
+
+/*-------( Git Ignore | Three levels of ignorance Table )---------------------*/
+  .reveal section .fragment.strike.visible.current-fragment {
+    opacity: 0.4;
+  }
+
+/*-------( Git Command List )-------------------------------------------------*/
+  .reveal .command-list {
+    column-count: 7;
+    column-gap: 20px;
+    list-style: none;
+    white-space: nowrap;
+  }
+
+  .reveal .command-list li {
+    font-size: 40%;
+  }
+
+/*-------( Authors | Mailmap )--------------------------------------------------------*/
+  [data-badge=".mailmap"] code {
+    font-size: 80% !important;
+  }
+
+/*-------( Git alias |git alias alias)--------------------------------------------------*/
+  [style*="yo-dawg-git-alias.jpg"] {
+    filter: blur(10px);
+  }
+
+/*=======( Specific elements )================================================*/
+
+  .reveal section .fragment-container {
+    position: relative;
+  }
+
+  .reveal section .fragment-container .fragment {
+    position: absolute;
+    top: -2px;
+    left: 20px;
+  }
+
+  .reveal section thead th {
+    text-align: center;
+  }
+
+  .reveal section td {
+    white-space: nowrap;
+  }
+
+  .reveal section s {
+    text-decoration-color: red;
+    opacity: 0.4;
+  }
+
+  .reveal section blockquote::before {
+    content: '“';
+  }
+
+  .reveal section blockquote::after {
+    content: '”';
+  }
+
+  .reveal section .example-config .badge {
+    color: black;
+    background-color: white;
+  }
+
+  .reveal section [data-badge="@TODO"] {
+    background: lightyellow;
+    border: 1px solid yellow;
+    color: black;
+  }
+
+  .reveal section [data-badge="@TODO"] span.badge {
+    left: -10%;
+    right: auto;
+    top: -10%;
+  }
+
+  .reveal section .manual-link {
+    font-size: 60%;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .reveal section span.badge.example {
+    top: 1em;
+  }
+
+  .reveal section pre {
+    width: 100%;
+    background-color: #000;
+  }
+
+  .reveal .cli-example,
+  .reveal .example-command,
+  .reveal .example-config {
+    font-family: monospace;
+    width: 100%;
+  }
+
+  .reveal .example-config {
+    background-color: #FFF;
+    color: #333;
+  }
+
+  .reveal .example-config[data-badge] {
+    margin-top: 2em;
+    padding-top: 0.25em;
+  }
+
+  .reveal .example-command,
+  .reveal .cli-example {
+    background-color: #000;
+    color: #FFF;
+    font-size: 60%;
+    margin: 4rem 0;
+    padding: 2.5rem 0 1rem 0;
+  }
+
+  .reveal pre.cli-example {
+    padding: 1rem 0 0 0;
+  }
+
+  [data-badge] .badge.version {
+    color: #F54D27;
+    background-color: #F0F0E8;
+
+    /* [data-badge] span.badge.bottomRight */
+    top: auto;
+    right: -2%;
+    bottom: 0;
+    left: auto;
+    margin: -0.7em 0;
+  }
+
+/*=======( Helper classes )===================================================*/
+
+  .reveal section .X-badge {
+    background-color: #000;
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 4px rgba(0, 0,0, 0.5);
+    color: #FFF;
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bold;
+    line-height: 1em;
+    margin: 0.1em 0;
+    padding: 0.15em 0.25em;
+  }
+
+  .reveal section .X-badge.version {background-color: #F0F0E8; color: #F54D27;}
+  .reveal section .X-badge.license {background-color: #007ec6; color: #FFF;}
+
+  .reveal section img.no-border { background:none; border:none; box-shadow:none; }
+
+  .reveal section .size-double {
+    transform: scale(1.5) translate(0%, 25%);
+    width: 50%;
+  }
+
+  .reveal section .size-three-quarter,
+  .reveal section .size-three-quarters {
+    transform: scale(0.75) translate(-25%);
+    width: 150%;
+  }
+
+  .reveal section .size-half,
+  .reveal section .size-two-quarter,
+  .reveal section .size-two-quarters {
+    transform: scale(0.5) translate(-50%);
+    width: 200%;
+  }
+
+  .reveal section .size-one-quarter,
+  .reveal section .size-quarter {
+    transform: scale(0.25) translate(-150%);
+    width: 400%;
+  }
+
+/*=======( Browser )==========================================================*/
+.reveal section .browser {
+  border:0.075em solid rgb(195, 195, 195);
+  border-radius: 0.25em;
+  box-shadow: 0px 2px 3px 0px rgba(50, 50, 50, 0.11);
+  text-align: left;
+  vertical-align: top;
+}
+
+.reveal section .browser__head {
+  background: #E8E8E8;
+  border-radius: 0.15em 0.15em 0 0;
+  font-size: 60%;
+  height: 1.5em;
+}
+
+.reveal section .browser__bullet {
+    height: 0.75em;
+    width: 0.75em;
+    display: inline-block;
+    background: #ccc;
+    border-radius: 100%;
+    vertical-align: middle;
+    margin-left: 0.15em;
+}
+.reveal section .browser__bullet:first-of-type {
+    margin-left: 0.75em;
+}
+
+.reveal section .bullet__red {background: #DF7065;}
+.reveal section .bullet__yellow {background: #E6BB46;}
+.reveal section .bullet__green {background: #5BCC8B;}
+
+.reveal section .browser__title {
+    background: #fff;
+    border-radius: 0.15em;
+    color: #333;
+    font-size: 60%;
+    margin-left: 1em;
+    padding: 0.5em 1.5em 0.15em;
+    vertical-align: middle;
+}
+.reveal section .browser__title .scheme {
+    color: #999;
+}
+.reveal section .browser__body {
+  background-color: #FFF;
+  font-size: 55%;
+}
+.reveal section .browser__body > * {
+  margin: 0;
+}
+
+/*-------(  )-----------------------------------------------------------------*/
+</style>

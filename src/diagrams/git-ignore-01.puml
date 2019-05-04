@@ -1,0 +1,31 @@
+@startuml
+
+folder home as "$HOME" #FFE {
+
+    folder wd as "Working Directory" #FFC {
+
+        file ".gitignore" #FF6
+        note bottom
+          **<size:24>Ignore File**
+        end note
+
+        folder repo as ".git/info" #FFE {
+            file "exclude" #FF6
+            note bottom
+              **<size:24>Local Excludes File**
+            end note
+
+        }
+    }
+
+    folder g as ".config/git/" #FFC {
+        file "ignore" #FF6
+        note bottom
+          **<size:24>Global Excludes File**
+        end note
+
+    }
+
+}
+
+@enduml

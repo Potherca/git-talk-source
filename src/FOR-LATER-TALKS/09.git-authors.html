@@ -1,0 +1,89 @@
+<!-- ======================================================================= -->
+<!--                                AUTHORS                                  -->
+<!-- ======================================================================= -->
+<section data-slide-section="git authors">
+  <section>
+    <h1>Authors & Mailmap</h1>
+    <aside class="notes"></aside>
+  </section>
+
+  <section>
+    <h1>List all authors</h1>
+    <pre class="cli-example"><code class="language-shell">git log --email --numbered --summary</code></pre>
+    <a class="manual-link">https://git-scm.com/docs/git-shortlog</a>
+    <aside class="notes"></aside>
+  </section>
+
+  <section>
+    <h1>Duplicate Authors?</h1>
+    <p data-badge="@TODO">Show an image of duplicate authors</p>
+    <aside class="notes"></aside>
+  </section>
+
+  <section>
+    <h1>Mapping authors</h1>
+    <pre class="example-config" data-badge=".mailmap" data-badge-position="tl"><code>
+# ==============================================================================
+# The .mailmap feature is used to coalesce together commits by the same person
+# in the shortlog, where their name and/or email address was spelled differently.
+#
+# In the simple form, each line in the file consists of the canonical real name
+# of an author, whitespace, and an email address used in the commit (enclosed by
+# < and >) to map to the name.
+#
+#       Proper Name &lt;commit@email.xx&gt;
+#
+# Other examples:
+#
+# &lt;proper@email.xx&gt; &lt;commit@email.xx&gt;               # replace only email
+# Proper Name &lt;proper@email.xx&gt; &lt;commit@email.xx&gt;   # replace both name and email
+# ==============================================================================
+
+</code></pre>
+
+    <a class="manual-link">https://git-scm.com/docs/git-shortlog#_mapping_authors</a>
+    <aside class="notes"></aside>
+  </section>
+
+  <section data-badge="" data-badge-class="version">
+    <h1 class="size-three-quarterX">Always use mailmap</h1>
+    <pre class="example-config" data-badge=".gitconfig" data-badge-position="tl"><code>
+[log]
+        mailmap = true
+</code></pre>
+    <p class="example-command" data-badge="git config" data-badge-position="tl">
+      log.mailmap true
+    </p>
+    <a class="manual-link">https://git-scm.com/docs/git-config#git-config-logmailmap</a>
+    <aside class="notes"></aside>
+  </section>
+
+  <section data-badge="" data-badge-class="version">
+    <h1 class="size-three-quarter">Add extra mailmap(s)</h1>
+    <pre class="example-config" data-badge=".gitconfig" data-badge-position="tl"><code>
+[mailmap]
+        file = /path/to/mailmap.file
+</code></pre>
+    <p class="example-command" data-badge="git config" data-badge-position="tl">
+      mailmap.file /path/to/mailmap.file
+    </p>
+    <a class="manual-link">https://git-scm.com/docs/git-config#git-config-mailmapfile</a>
+    <aside class="notes"></aside>
+  </section>
+
+  <section>
+    <h1 class="size-three-quarter">Add extra mailmap(s)</h1>
+    <blockquote>
+      The default mailmap, located in the root of the repository, is loaded first,
+      then the mailmap file pointed to by this variable.
+      The location of the mailmap file may be in a repository subdirectory,
+      or somewhere outside of the repository.
+    </blockquote>
+    <aside class="notes">
+      This means you can either add extra mailmaps per repo `--local`
+      Or for all repo's, using `--global`.
+      You could even combine this with [include] or [includeIf]
+    </aside>
+  </section>
+
+</section>

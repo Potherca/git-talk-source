@@ -1,0 +1,92 @@
+<!-- ======================================================================= -->
+<!--                          WORKING WITH CHANGES                           -->
+<!-- ======================================================================= -->
+<section data-slide-section="working with changes">
+
+<!-- ======================================================================= -->
+  <section>
+    <h1>What have I done!?</h1>
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <h1>Branch status</h1>
+
+    <pre><code class="language-shell">
+    git branch <span class="fragment fade-in-then-semi-out" data-fragment-index="1"
+    >-</span>-v<span class="fragment fade-in-then-semi-out" data-fragment-index="1"
+    >erbose </span>
+    <span class="fragment" data-fragment-index="2"></span>
+    <span class="fragment" data-fragment-index="3">
+* master  f44599481 [ahead 2] Last commit message on master.
+  develop 4563a0d9d [behind 35] The last commit message on develop.
+  other   260071fdb Last commit message of the other branch.
+    </span>
+</code></pre>
+
+    <p class="fragment" data-fragment-index="3">Shows which branches are ahead/behind</p>
+
+    <aside class="notes"></aside>
+
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="v1.7.0" data-badge-class="version">
+    <h1>Unpushed changes</h1>
+
+    <pre><code class="language-shell">
+    git log @{u<span class="fragment semi-fade-out">pstream</span>}..
+<span class="fragment">
+    commit f44599481cc692ed78b8f14db2c6b66671daaee2 (HEAD -> master)
+
+    [...]
+    </span></code></pre>
+
+    <aside class="notes">
+      If you push elsewhere than where you pull, use @{push}..
+      @{push} v2.5.0
+    </aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <h1>Unpushed changes</h1>
+    <h2>On all branches</h2>
+
+    <pre><code class="language-shell">
+    git log --branches --not --remotes
+
+  <span class="fragment">
+  commit f44599481cc692ed78b8f14db2c6b66671daaee2 (HEAD -> master)
+
+  [...]
+
+  commit 58c6697c7cd38bbc246e18496d23a08cc6e02ef8 (other)
+
+  [...]
+
+  </span></code></pre>
+
+    <aside class="notes">
+    </aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <h1>Unpushed changes</h1>
+    <h2>On all branches</h2>
+
+    <pre class="example-config" data-badge=".gitconfig" data-badge-position="tl"><code>
+[alias]
+            unpushed = log --branches --not --remotes
+</code></pre>
+
+    <p class="cli-example" data-badge="git config" data-badge-position="tl">
+      alias.unpushed 'log --branches --not --remotes'
+    </p>
+
+    <aside class="notes"></aside>
+  </section>
+
+</section>

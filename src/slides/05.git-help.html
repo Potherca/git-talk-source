@@ -1,0 +1,395 @@
+<!-- ======================================================================= -->
+<!--                                HELP !!!                                 -->
+<!-- ======================================================================= -->
+<section data-slide-section="git help">
+  <section>
+    <h1>Help!</h1>
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <h1>git help</h1>
+
+    <pre><code class="language-shell">
+  git help
+
+</code></pre>
+    <a class="manual-link">https://git-scm.com/docs/git-help</a>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <pre class="example-command" data-badge="git help (1/2)" data-badge-position="tl"><code style="font-size: 80%; line-height: 100%;">
+usage: git [--version] [--help] [-C &lt;path&gt;] [-c name=value]
+           [--exec-path[=&lt;path&gt;]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;] [--namespace=&lt;name&gt;]
+           &lt;command&gt; [&lt;args&gt;]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+</code></pre>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <pre class="example-command" data-badge="git help (2/2)" data-badge-position="tl"><code style="font-size: 80%; line-height: 100%;"
+>   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help &lt;command&gt;' or 'git help &lt;concept&gt;'
+</code></pre>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <h1>But wait!<br> There's More!</h1>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <pre class="example-command" data-badge="git help --all (1/5)" data-badge-position="tl"><code style="font-size: 80%; line-height: 100%;">
+usage: git [--version] [--help] [-C &lt;path&gt;] [-c name=value]
+           [--exec-path[=&lt;path&gt;]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;] [--namespace=&lt;name&gt;]
+           &lt;command&gt; [&lt;args&gt;]
+
+available git commands in '/usr/lib/git-core'
+
+  add                       merge-one-file
+  add--interactive          merge-ours
+  am                        merge-recursive
+  annotate                  merge-resolve
+  apply                     merge-subtree
+  archive                   merge-tree
+  bisect                    mergetool
+  bisect--helper            mktag
+  blame                     mktree
+  branch                    mv
+  bundle                    mw
+  cat-file                  name-rev
+  check-attr                notes
+</code></pre>
+
+    <aside class="notes"></aside>
+  </section>
+<!-- ======================================================================= -->
+
+  <section>
+    <pre class="example-command" data-badge="git help --all (2/5)" data-badge-position="tl"><code style="font-size: 80%; line-height: 100%;"
+    >  check-ignore              pack-objects
+  check-mailmap             pack-redundant
+  check-ref-format          pack-refs
+  checkout                  patch-id
+  checkout-index            prune
+  cherry                    prune-packed
+  cherry-pick               pull
+  citool                    push
+  clean                     quiltimport
+  clone                     range-diff
+  column                    read-tree
+  commit                    rebase
+  commit-graph              rebase--helper
+  commit-tree               receive-pack
+  config                    reflog
+  count-objects             remote
+  credential                remote-ext
+  credential-cache          remote-fd
+  credential-cache--daemon  remote-ftp
+  credential-store          remote-ftps
+  cvsexportcommit           remote-http
+  cvsimport                 remote-https
+</code></pre>
+
+    <aside class="notes"></aside>
+  </section>
+<!-- ======================================================================= -->
+
+  <section>
+    <pre class="example-command" data-badge="git help --all (3/5)" data-badge-position="tl"><code style="font-size: 80%; line-height: 100%;"
+    >  cvsserver                 remote-mediawiki
+  daemon                    remote-testsvn
+  describe                  repack
+  diff                      replace
+  diff-files                request-pull
+  diff-index                rerere
+  diff-tree                 reset
+  difftool                  rev-list
+  difftool--helper          rev-parse
+  fast-export               revert
+  fast-import               rm
+  fetch                     send-email
+  fetch-pack                send-pack
+  filter-branch             serve
+  fmt-merge-msg             sh-i18n--envsubst
+  for-each-ref              shell
+  format-patch              shortlog
+  fsck                      show
+  fsck-objects              show-branch
+  gc                        show-index
+  get-tar-commit-id         show-ref
+  grep                      stage
+</code></pre>
+
+    <aside class="notes"></aside>
+  </section>
+<!-- ======================================================================= -->
+
+  <section>
+    <pre class="example-command" data-badge="git help --all (4/5)" data-badge-position="tl"><code style="font-size: 80%; line-height: 100%;"
+    >  gui                       stash
+  gui--askpass              status
+  hash-object               stripspace
+  help                      submodule
+  http-backend              submodule--helper
+  http-fetch                subtree
+  http-push                 svn
+  imap-send                 symbolic-ref
+  index-pack                tag
+  init                      unpack-file
+  init-db                   unpack-objects
+  instaweb                  update-index
+  interpret-trailers        update-ref
+  log                       update-server-info
+  ls-files                  upload-archive
+  ls-remote                 upload-pack
+  ls-tree                   var
+  mailinfo                  verify-commit
+  mailsplit                 verify-pack
+  merge                     verify-tag
+  merge-base                web--browse
+  merge-file                whatchanged
+</code></pre>
+
+    <aside class="notes"></aside>
+  </section>
+<!-- ======================================================================= -->
+
+  <section>
+    <pre class="example-command" data-badge="git help --all (5/5)" data-badge-position="tl"><code style="font-size: 80%; line-height: 100%;"
+    >  merge-index               worktree
+  merge-octopus             write-tree
+
+git commands available from elsewhere on your $PATH
+
+  cherry-copy   get-branch    is-current    out           pull-request
+  cherry-move   info          l             prompt
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help &gt;command&lt;' or 'git help &gt;concept&lt;'
+to read about a specific subcommand or concept.
+</code></pre>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <pre class="example-command" data-badge="git help --guides" data-badge-position="tl"><code style="font-size: 80%; line-height: 100%;">
+The common Git guides are:
+   attributes          Defining attributes per path
+   cli                 Git command-line interface and conventions
+   core-tutorial       A Git core tutorial for developers
+   cvs-migration       Git for CVS users
+   diffcore            Tweaking diff output
+   everyday            A useful minimum set of commands for Everyday Git
+   glossary            A Git Glossary
+   hooks               Hooks used by Git
+   ignore              Specifies intentionally untracked files to ignore
+   modules             Defining submodule properties
+   namespaces          Git namespaces
+   repository-layout   Git Repository Layout
+   revisions           Specifying revisions and ranges for Git
+   tutorial            A tutorial introduction to Git
+   tutorial-2          A tutorial introduction to Git: part two
+   workflows           An overview of recommended workflows with Git
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help &gt;command&lt;' or 'git help &gt;concept&lt;'
+to read about a specific subcommand or concept.
+</code></pre>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+
+    <h1>That's a lot of help</h1>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="v1.5.4" data-badge-class="version">
+
+    <h1 class="size-three-quarter">Open help in a browser<sup>*</sup></h1>
+
+    <p class="fragment" data-fragment-index="1">* Requires the git-doc package to be installed</p>
+
+    <pre><code class="language-shell">
+    git help <span class="fragment fade-in-then-semi-out" data-fragment-index="2">-</span>-w<span class="fragment fade-in-then-semi-out" data-fragment-index="2">eb</span>
+</code></pre>
+
+<span class="fragment"></span>
+    <a class="manual-link">https://git-scm.com/docs/git-help#_options</a>
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="example" data-badge-class="example">
+    <h1 class="size-three-quarter">Open help in a browser</h1>
+
+<div class="browser" data-badge="git help --help --web">
+    <div class="browser__head">
+        <span class="browser__bullet bullet__red"></span>
+        <span class="browser__bullet bullet__yellow"></span>
+        <span class="browser__bullet bullet__green"></span>
+        <span class="browser__title"><span class="scheme">file://</span>localhost/usr/share/doc/git/html/git.html</span>
+    </div>
+    <div class="browser__body"><pre style="background: #FEFEFE; color: #333;">
+
+    GIT-HELP(1)                                           Git Manual                                          GIT-HELP(1)
+
+
+
+    NAME
+           git-help - Display help information about Git
+
+    SYNOPSIS
+           git help [-a|--all] [-g|--guide]
+                      [-i|--info|-m|--man|-w|--web] [COMMAND|GUIDE]
+
+
+    DESCRIPTION
+           With no options and no COMMAND or GUIDE given, the synopsis of the git command and a list of the most commonly
+           used Git commands are printed on the standard output.
+
+           If the option --all or -a is given, all available commands are printed on the standard output.
+
+           If the option --guide or -g is given, a list of the useful Git guides is also printed on the standard output.
+
+           If a command, or a guide, is given, a manual page for that command or guide is brought up. The man program is
+           used by default for this purpose, but this can be overridden by other options or configuration variables.
+
+           Note that git --help ... is identical to git help ... because the former is internally converted into the
+           latter.
+
+           To display the git(1) man page, use git help git.
+
+           This page can be displayed with git help help or git help --help
+
+    OPTIONS
+           -a, --all
+               Prints all the available commands on the standard output. This option overrides any given command or guide
+               name.
+
+           -g, --guides
+               Prints a list of useful guides on the standard output. This option overrides any given command or guide
+               name.
+
+           -i, --info
+               Display manual page for the command in the info format. The info program will be used for that purpose.
+
+           -m, --man
+               Display manual page for the command in the man format. This option may be used to override a value set in
+               the help.format configuration variable.
+
+               By default the man program will be used to display the manual page, but the man.viewer configuration
+               variable may be used to choose other display programs (see below).
+
+           -w, --web
+               Display manual page for the command in the web (HTML) format. A web browser will be used for that purpose.
+
+               The web browser can be specified using the configuration variable help.browser, or web.browser if the
+               former is not set. If none of these config variables is set, the git web--browse helper script (called by
+               git help) will pick a suitable default. See git-web--browse(1) for more information about this.
+
+        </pre>
+      </div>
+    </div>
+
+    <a class="manual-link"></a>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="v1.5.4" data-badge-class="version">
+    <h1 class="size-three-quarter">Always open help in a browser</h1>
+
+    <pre class="example-config" data-badge=".gitconfig" data-badge-position="tl"><code>
+[help]
+        format = web
+</code></pre>
+
+    <p class="example-command" data-badge="git config --global" data-badge-position="tl">
+      help.format web
+    </p>
+
+    <a class="manual-link">https://git-scm.com/docs/git-config#git-config-helpformat</a>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="v1.5.4" data-badge-class="version">
+    <h1>Select a browser</h1>
+
+    <pre class="example-config" data-badge=".gitconfig" data-badge-position="tl"><code>
+[help]
+        browser = firefox
+</code></pre>
+
+    <p class="example-command" data-badge="git config --global" data-badge-position="tl">
+      help.browser firefox
+    </p>
+
+    <a class="manual-link">https://git-scm.com/docs/git-config#git-config-helpbrowser</a>
+
+    <aside class="notes">
+      Specify the browser that will be used to display help in the web format.
+    </aside>
+  </section>
+
+</section>

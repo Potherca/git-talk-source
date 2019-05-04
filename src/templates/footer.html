@@ -1,0 +1,61 @@
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+  /* global Reveal, hljs */
+    let talkDuration = 40; // minutes
+    let defaultTiming = talkDuration * 60 / document.querySelectorAll('.slides section').length
+    let allottedTime = talkDuration * 60 * 1000;
+
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      // autoPlayMedia: null, // Media will only autoplay if data-autoplay is present
+      center: true,
+      controls: true,
+      defaultTiming: defaultTiming, // number of seconds per slide @TODO: Add calcualtion for (allottedTime / slide count)
+      fragmentInURL: true,
+      history: true,
+      pdfSeparateFragments: false, // print all fragments in their visible states on the same slide
+      pdfMaxPagesPerSlide: 1, // ensures no slide grows to more than one printed page
+      progress: true,
+      slideNumber: 'c/t', // h.v, h/v, c or c/t
+      showSlideNumber: 'speaker',
+      transition: 'slide',
+
+      // elapsed-time-bar
+      allottedTime: allottedTime,
+      barColor: 'rgb(101, 123, 131)',
+      pausedBarColor: 'rgb(101, 123, 131, 0.6)',
+      progressBarHeight: 4,
+
+      // badges
+        badges: {
+          languages: {
+            shell: {
+              label: 'bash',
+              fg: 'white',
+              bg: '#3BAC48',
+              position: 'tr'
+            }
+          }
+        },
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [
+        // Cross-browser shim for classList
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        // Syntax highlight for <code> elements
+        // { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/search/search.js', async: true },
+        // Zoom in and out with Alt+click
+        //{ src: 'plugin/zoom-js/zoom.js', async: true },
+        // Speaker notes
+        { src: 'plugin/notes/notes.js', async: true },
+        // Progress bar of elapsed time
+        { src: 'plugin/elapsed-time-bar/elapsed-time-bar.js'},
+        //
+        { src: 'plugin/reveal-badges/badges.js' }
+      ]
+    });
+  </script>

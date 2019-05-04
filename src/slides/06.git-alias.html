@@ -1,0 +1,148 @@
+<!-- ======================================================================= -->
+<!--                              ALIASSES                                   -->
+<!-- ======================================================================= -->
+<section data-slide-section="git alias">
+
+<!-- ======================================================================= -->
+  <section>
+    <h1>Alias</h1>
+    <aside class="notes">
+      @TODO: mention https://git.wiki.kernel.org/index.php/Aliases (and others?)
+    </aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="v1.4.0" data-badge-class="version">
+
+    <h1>Git alias</h1>
+
+    <pre class="example-config" data-badge=".gitconfig" data-badge-position="tl"><code>
+[alias]
+        name = command
+</code></pre>
+
+    <p class="cli-example" data-badge="git config" data-badge-position="tl">
+      alias.name command
+    </p>
+
+    <a class="manual-link">https://git-scm.com/docs/git-config#git-config-alias</a>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="example">
+    <h1>Git alias</h1>
+
+    <pre class="example-config" data-badge="~/.gitconfig" data-badge-position="tl"><code>
+[alias]
+        unstage = reset HEAD --
+</code></pre>
+    <p class="cli-example" data-badge="git config --global " data-badge-position="tl">
+      alias.unstage 'reset HEAD --'
+    </p>
+
+    <a class="manual-link">https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases</a>
+
+    <aside class="notes">
+      Any files added with "git add" can be "unstaged"
+      using "git reset HEAD --"; hence the alias.
+    </aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="v1.5.0" data-badge-class="version">
+    <h1 class="size-three-quarter">Shell command as alias</h1>
+    <blockquote cite="https://git-scm.com/docs/git-config#git-config-alias">
+      If the alias expansion is prefixed with an exclamation point, it will be treated as a shell command.
+    </blockquote>
+    <blockquote class="fragment size-three-quarter" style="width:100%" cite="https://git-scm.com/docs/git-config#git-config-alias">
+        Shell commands will be executed from the top-level directory of a repository, which may not necessarily be the current directory.
+    </blockquote>
+    <a class="manual-link">https://git-scm.com/docs/git-config#git-config-alias</a>
+    <aside class="notes">
+    </aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="example">
+    <h1 class="size-three-quarter">Shell command as alias</h1>
+    <pre><code class="language-shell">
+echo "Hello!"
+</code></pre>
+
+    <pre class="example-config" data-badge=".gitconfig" data-badge-position="tl"><code>
+[alias]
+        hello = !echo "Hello!"
+</code></pre>
+
+    <p class="cli-example" data-badge="git config" data-badge-position="tl">
+      alias.hello '!echo "hello"'
+    </p>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="example">
+    <h1 class="size-three-quarter">Shell command as alias</h1>
+    <pre><code class="language-shell">
+git hello
+
+<span class="fragment">Hello!</span>
+</code></pre>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-background-image="./img/yo-dawg-git-alias.jpg">
+    <img src="./img/yo-dawg-git-alias.jpg" class="size-double" />
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="example">
+    <h1 class="size-three-quarter">Shell command as alias</h1>
+    <pre><code class="language-shell">
+git config --list | grep 'alias.' | sort | cut -d= -f1
+</code></pre>
+
+    <pre class="example-config" data-badge=".gitconfig" data-badge-position="tl"><code>
+[alias]
+      alias = !git config --list | grep 'alias.' | sort | cut -d'.' -f1,
+</code></pre>
+
+    <p class="cli-example" style="font-size: 50%;" data-badge="git config" data-badge-position="tl">
+      alias.alias '!git config --list | grep "alias." | sort | cut -d"." -f1,'
+    </p>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <h1 class="size-three-quarter">Shell command as alias</h1>
+    <pre><code class="language-shell">
+git alias
+
+<span class="fragment">
+alias.alias
+alias.hello
+alias.unstage
+</span></code></pre>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <h1>
+      Don't use aliasses
+      <span class="fragment">for native functions</span>
+    </h1>
+    <h2 class="fragment">Use autocompletion instead</h2>
+    <aside class="notes"></aside>
+  </section>
+
+</section>

@@ -1,0 +1,171 @@
+<!-- ======================================================================= -->
+<!--                            JUST IGNORE THIS                             -->
+<!-- ======================================================================= -->
+<section data-slide-section="git ignore">
+  <section>
+    <h1>Ignore This</h1>
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="example">
+    <h1>Git ignore</h1>
+    <pre class="example-config" data-badge=".gitignore" data-badge-position="tl"><code>
+        IgnoredFolder/*
+        ignored-file.txt
+</code></pre>
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <h1>Git ignore</h1>
+    <pre><code class="language-shell">
+    git status --ignored
+<span class="fragment">
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Ignored files:
+  (use "git add -f &lt;file&gt;..." to include in what will be committed)
+
+        IgnoredFolder/
+        ignored-file.txt
+
+nothing to commit, working tree clean
+</span>
+</code></pre>
+
+    <a class="manual-link">https://git-scm.com/docs/git-status#git-status---ignoredltmodegt</a>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="bad example" data-badge-class="example" data-badge-fg="red">
+    <h1>Git ignore</h1>
+    <pre class="example-config" data-badge=".gitignore" data-badge-position="tl">
+      <code style="font-size: 60%;line-height: 100%;" data-fragment-index="1" class="fragment strike">
+        ### IDE ###
+        nbbuild     # Netbeans
+        .idea/      # IntelliJ
+        .project    # Eclipse
+        .vscode/*   # VisualStudioCode
+
+        ### Linux ###
+        *~
+
+        ### macOS ###
+        .DS_Store
+        .AppleDouble
+        .LSOverride
+        ._*
+
+        ### Windows ###
+        Thumbs.db
+        [Dd]esktop.ini
+
+        <b>### WHO KNOWS WHAT ELSE ... ###</b>
+    </code></pre>
+    <h2 class="fragment" data-fragment-index="1">dont do this!</h2>
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <h1 class="size-three-quarter">Three levels of ignorance</h1>
+    <p>Global / Repository / Local</p>
+    <img src="./img/git-ignore-01.svg" />
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <h1 class="size-three-quarter">Three levels of ignorance</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Global<br><small>Exclude File</small></th>
+      <th>Repository<br><small>Ignore File</small></th>
+      <th>Local<br><small>Exclude File</small></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>This machines only</td>
+      <td><s>This machines only</s></td>
+      <td>This machines only</td>
+    </tr>
+    <tr>
+      <td><s>This repo only</s></td>
+      <td>This repo only</td>
+      <td>This repo only</td>
+    </tr>
+    <tr>
+      <td><s>Committed</s></td>
+      <td>Committed</td>
+      <td><s>Committed</s></td>
+    </tr>
+    <tr>
+      <td>Configurable</td>
+      <td><s>Configurable</s></td>
+      <td class="fragment semi-fade-out">Configurable</td>
+    </tr>
+  </tbody>
+</table>
+
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section data-badge="" data-badge-class="version">
+    <h1>Global git ignore</h1>
+
+    <pre class="example-config" data-badge="~/.gitconfig" data-badge-position="tl"><code>
+[core]
+        excludesfile = ~/.gitignore
+</code></pre>
+    <p class="example-command" data-badge="git config --global" data-badge-position="tl">
+      core.excludesfile ~/.gitignore
+    </p>
+
+    <a class="manual-link">https://git-scm.com/docs/git-config/#git-config-coreexcludesFile</a>
+
+    <aside class="notes">
+      - It doesn't make sense to configure this --local. BUT YOU CAN.
+      - Remind them: DO NOT ADD AN ALIAS for `git ignore`.
+      Just use `echo 'file.ext' >> .gitignore` or an editor!
+    </aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <h1 class="size-three-quarter">Three levels of ignorance</h1>
+    <p>Global / Repository / Local</p>
+    <figure class="fragment-container">
+      <img class="no-border" src="./img/git-ignore-01.svg" />
+      <img class="no-border fragment" src="./img/git-ignore-02.svg" />
+    </figure>
+    <aside class="notes"></aside>
+  </section>
+
+<!-- ======================================================================= -->
+  <section>
+    <h1>git ignore</h1>
+    <h2>Resources</h2>
+
+    <ul>
+      <li>
+        A collection of useful .gitignore templates<br>
+        <a>https://github.com/github/gitignore</a>
+      </li>
+      <li>
+        Create useful .gitignore files for your project<br>
+        <a>https://www.gitignore.io/</a>
+      </li>
+    </ul>
+    <aside class="notes"></aside>
+  </section>
+
+</section>

@@ -6,22 +6,25 @@
   "dependencies": {
     "reveal-badges": "ThomasWeinert/reveal-badges",
     "reveal-elapsed-time-bar": "tkrkt/reveal.js-elapsed-time-bar",
-    "reveal.js": "^3.7.0"
+    "reveal.js": "^3.7.0",
+    "snyk": "^1.230.5"
   },
   "scripts": {
     "webpack": "webpack",
     "babel": "babel src --output-dir lib",
-    "test": " "
+    "test": " ",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
-    "babel-cli": "^6.26.0",
-    "babel-loader": "^8.0.4",
-    "babel-minify": "^0.5.0",
-    "babel-preset-minify": "^0.5.0",
-    "webpack": "^4.22.0",
-    "webpack-cli": "^3.1.2"
+    "@babel/core": "7.7.4",
+    "@babel/preset-env": "7.7.4",
+    "babel-cli": "6.26.0",
+    "babel-loader": "8.0.6",
+    "babel-minify": "0.5.1",
+    "babel-preset-minify": "0.5.1",
+    "webpack": "4.41.2",
+    "webpack-cli": "3.3.10"
   },
   "repository": {
     "type": "git",
@@ -29,5 +32,6 @@
   },
   "keywords": [],
   "author": "Ben Peachey <potherca@gmail.com>",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "snyk": true
 }

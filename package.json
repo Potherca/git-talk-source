@@ -6,12 +6,15 @@
   "dependencies": {
     "reveal-badges": "ThomasWeinert/reveal-badges",
     "reveal-elapsed-time-bar": "tkrkt/reveal.js-elapsed-time-bar",
-    "reveal.js": "^3.7.0"
+    "reveal.js": "^3.7.0",
+    "snyk": "^1.198.0"
   },
   "scripts": {
     "webpack": "webpack",
     "babel": "babel src --output-dir lib",
-    "test": " "
+    "test": " ",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "@babel/core": "7.5.5",
@@ -29,5 +32,6 @@
   },
   "keywords": [],
   "author": "Ben Peachey <potherca@gmail.com>",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "snyk": true
 }

@@ -23,7 +23,7 @@
     "babel-loader": "8.0.6",
     "babel-minify": "0.5.1",
     "babel-preset-minify": "0.5.1",
-    "webpack": "4.40.1",
+    "webpack": "4.40.2",
     "webpack-cli": "3.3.7"
   },
   "repository": {

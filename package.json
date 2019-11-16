@@ -24,7 +24,7 @@
     "babel-minify": "0.5.1",
     "babel-preset-minify": "0.5.1",
     "webpack": "4.40.2",
-    "webpack-cli": "3.3.7"
+    "webpack-cli": "3.3.10"
   },
   "repository": {
     "type": "git",

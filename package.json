@@ -6,8 +6,8 @@
   "dependencies": {
     "reveal-badges": "ThomasWeinert/reveal-badges",
     "reveal-elapsed-time-bar": "tkrkt/reveal.js-elapsed-time-bar",
-    "reveal.js": "^3.7.0",
-    "snyk": "^1.230.5"
+    "reveal.js": "^3.9.2",
+    "snyk": "^1.290.1"
   },
   "scripts": {
     "webpack": "webpack",

@@ -6,7 +6,7 @@
   "dependencies": {
     "reveal-badges": "ThomasWeinert/reveal-badges",
     "reveal-elapsed-time-bar": "tkrkt/reveal.js-elapsed-time-bar",
-    "reveal.js": "^3.7.0",
+    "reveal.js": "^4.0.0",
     "snyk": "^1.230.5"
   },
   "scripts": {

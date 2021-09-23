@@ -7,7 +7,7 @@
     "reveal-badges": "ThomasWeinert/reveal-badges",
     "reveal-elapsed-time-bar": "tkrkt/reveal.js-elapsed-time-bar",
     "reveal.js": "^4.0.0",
-    "snyk": "^1.465.0"
+    "snyk": "^1.685.0"
   },
   "scripts": {
     "webpack": "webpack",
@@ -17,14 +17,14 @@
     "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
-    "@babel/core": "7.7.4",
-    "@babel/preset-env": "7.7.4",
+    "@babel/core": "7.19.1",
+    "@babel/preset-env": "7.19.1",
     "babel-cli": "6.26.0",
-    "babel-loader": "8.0.6",
-    "babel-minify": "0.5.1",
-    "babel-preset-minify": "0.5.1",
-    "webpack": "4.41.2",
-    "webpack-cli": "3.3.10"
+    "babel-loader": "8.2.5",
+    "babel-minify": "0.5.2",
+    "babel-preset-minify": "0.5.2",
+    "webpack": "5.74.0",
+    "webpack-cli": "4.10.0"
   },
   "repository": {
     "type": "git",

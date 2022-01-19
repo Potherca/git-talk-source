@@ -17,8 +17,8 @@
     "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
-    "@babel/core": "7.16.7",
-    "@babel/preset-env": "7.16.8",
+    "@babel/core": "7.16.10",
+    "@babel/preset-env": "7.16.10",
     "babel-cli": "6.26.0",
     "babel-loader": "8.2.3",
     "babel-minify": "0.5.1",
